@@ -6,5 +6,9 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 
+const empRouter = require('./routes/employee');
+
+app.use('/employee', empRouter);
+
 module.exports = app;
 
