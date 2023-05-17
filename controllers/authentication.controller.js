@@ -6,7 +6,7 @@ exports.registration=async(req,res,next)=>{
     console.log(req.body);
     try{
     const name=req.body.name;
-    const email=req.body.email;
+    const email=req.body.email; 
     const password=await bcrypt.hash(req.body.password,10);
     const newUser= new Users({
         name,email,password

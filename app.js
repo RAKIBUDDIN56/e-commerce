@@ -4,8 +4,10 @@ const app = express();
 
 app.use(cors())
 app.use(express.json())
-const router = require('./routes/user.route');
-app.use('/api',router);
+const userRouter = require('./routes/user.route');
+const categoryRouter = require('./routes/category.route');
+app.use('/api',userRouter);
+app.use('/api',categoryRouter);
 
 
 module.exports = app;
